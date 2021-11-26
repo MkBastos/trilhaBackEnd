@@ -8,3 +8,11 @@ Foi pensando nisso que foi criado os programas de versionamento de possibilitand
 Sendo possivel até mesmo abrir versoes anteriores desse projeto sem dores de cabeça, assim voce pode ter as seguintes opções, rastreabilidade mantendo um historico de alterações do documento e po quem foi feito, redução de duplicação e erros ou de arquivos com a mesma informação, visão geral para gestão do processo, sendo mais visivel para gerenciar o projeto tendo todas as informações de quem e quando o documento foi alterado e comentarios do por que as mudanças foram feitas, recuperação de versoes anteriores em caso da necessidade de voltar uma versão anterior onde determinada funcão foi incluida ou excluida do projeto e um dos mais importantes o ganho de tempo!
 Existem varios tipo de softwares de versionamento no mercado para todos os gostos hoje em dia como o Git, Github, VCS, Bitkeeper basta voce procurar o que mais te agrade e começar a usar!
 Hoje em dia é muito utilizado o Git e Github que apesar do nome ser parecido são diferentes porém se comunicam, então o versionamento é muito utilziado para o desenvolvimento do software devido as facilidade e controle que se pode ter em um projeto.
+
+B) B) 1. Gerenciar as alterações em um arquivo.
+   2. Permite que todos os membros utilizem da versão mais recente de um projeto.
+   3. Manter um historico detalhado de alterações e de quem fez as alterações.
+   4. Melhora a questão de testes sendo mais facil de dectar um erro e com pouco impacto para o usuário sendo possivel reverter para um versão anterior.
+   5. é possivel varias pessoas trabalharem no mesmo projeto criando ramificações trazendo mais eficiência.
+
+C) Git, Github e Bitkeeper   
