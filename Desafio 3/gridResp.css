@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  .tag {
+    background: lightgray;
+    padding: 20px;
+  }
+  
+  .navega {
+    background: lightgray;
+    padding: 20px;
+  }
+  
+  header {
+    grid-area: cabecalho;
+  }
+  
+  nav {
+    grid-area: navegacao;
+    }
+  
+  nav ul {
+    list-style: none;
+    display: none
+  }
+  
+  section {
+    grid-area: sessao;
+  }
+  
+  article {
+    grid-area: artigo;
+  }
+  
+  aside {
+    grid-area: lateral;
+  }
+  
+  footer {
+    grid-area: rodape;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'cabecalho cabecalho'
+      'navegacao navegacao'
+      'sessao lateral'
+      'rodape rodape';
+    gap: 10px;
+  }
+  
+  @media (max-width: 600px) {
+      main {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        gap: 10px;
+        grid-template-areas: 
+          "cabecalho" 
+          "navegacao" 
+          "sessao" 
+          "lateral" 
+          "rodape";  
+    }
+    .navega, a {
+      background: rgb(104, 104, 230);
+     color: white;
+    }
+  
+    nav ul {
+      display: block;
+    }
+    nav p {
+      display: none;
+    }
+    section h2 {
+     display: none;
+    }

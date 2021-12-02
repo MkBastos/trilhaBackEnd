@@ -1,0 +1,25 @@
+.tag {
+    background: lightgray;
+    padding: 10px;
+    margin: 2px;
+    
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 10vh 60vh 10vh;
+    gap: 5px;
+  }
+  
+  header, nav, footer {
+    grid-column: 1/3
+  }
+  
+  article {
+    padding: 10px;
+    background: gray;
+    width: 70vh;
+    height: 80%
+  }
+

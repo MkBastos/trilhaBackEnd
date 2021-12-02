@@ -1,0 +1,19 @@
+.container {
+    border: solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .logotipo {
+    align-self: left;
+  }
+  
+  .navMenu {
+    display: flex;
+    list-style: none;
+  }
+  
+  .listaItem {
+    margin: 10px;
+  }
