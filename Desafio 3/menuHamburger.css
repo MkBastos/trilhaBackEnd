@@ -41,7 +41,7 @@ img {
     justify-content: flex-end;
   }
   .menu2 {
-    display: flex;
+    display: none;
     flex-direction: column;
     border: solid black;
     list-style: none;
