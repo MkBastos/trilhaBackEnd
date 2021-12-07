@@ -188,7 +188,7 @@ textarea {
   }
 
   h1 {
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .formulario {
@@ -208,4 +208,7 @@ textarea {
     background-image: linear-gradient( 45deg, pink, purple);
     color: white;
     border:none;
+}
+  .lorem {
+  font-size: 2vw;
 }
