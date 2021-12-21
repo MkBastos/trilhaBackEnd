@@ -1,0 +1,40 @@
+.container-a {
+    display: inline-block;
+    background-color:#ddd;
+    width: 80px;
+    height: 80px;
+    border-style: solid;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-top: -4px;
+    margin-bottom: -4px;
+  
+}
+
+.container-b {
+    display: inline-block;
+    background-color: black;
+    width: 80px;
+    height: 80px;
+    border-style: solid;
+    margin-left: -4px;
+    margin-right: -4px;
+    margin-top: -4px;
+    margin-bottom: -4px;
+
+}
+
+
+.container-c {
+    background-color: black;
+    width: 80px;
+    height: 80px;
+  
+}
+
+.container-d {
+    background-color: #ddd;
+    width: 80px;
+    height: 80px;
+   
+}
