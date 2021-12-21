@@ -1,0 +1,14 @@
+<hr aria-hidden="true">
+<p>
+  O número {{numeroComponent}} é {{isPar(1)}} e {{isPrimo(1)}}
+  <br>
+    <button [routerLink]="['/quadrado']" [state]="{valorRota: numeroComponent}">
+      Quanto é {{numeroComponent}} ao quadrado?
+    </button>
+<!--
+    <button [routerLink]="['/cubo']" [state]="{cuboRota: numeroComponent[i]}">
+      Quanto é {{numeroComponent[i]}} ao cubo?
+    </button>
+    -->
+    <button (click)="numeroCubo()"> Quanto é {{numeroComponent}} ao cubo?</button>
+</p>

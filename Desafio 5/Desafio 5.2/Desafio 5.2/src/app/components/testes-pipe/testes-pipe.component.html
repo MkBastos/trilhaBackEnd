@@ -1,0 +1,19 @@
+<hr aria-hidden="true">
+<p>Data do evento: {{evento.dataEvento | date:'dd/MM/yyyy' }}</p>
+<p>Preço: {{evento.precoEvento | currency:'BRL'}}</p>
+<p>Ingressos limitados ({{evento.limitadosEvento | percent : '2.1-4'}} já foram vendidos!)</p>
+<p>Código: {{ '12345678901234567890' | codigoConvite }}</p>
+<p>CPF do participante é: {{ '12345678901' | pessoaFisica }}</p>
+<p>CNPJ da empresa do participanete: {{ '12345678901234' | pessoaJuridica }}</p>
+
+<!--
+<div>
+    <h2> Exemplos de PIPE</h2>
+        <p>Currency: {{moeda | currency: 'BRL'}}</p>
+        <p>data: {{data | date:'dd/MM/yyyy'}}</p>
+        <p>decimal: {{numeroDecimal}}
+        <p>percent: {{numeroPercentual | percent: '2.1-4'}}</p>
+        <p>lowerCase: {{minusculo | lowercase}}</p>
+        <p>upperCase: {{maiusculo | uppercase}}</p>
+</div>
+-->
