@@ -1,0 +1,54 @@
+<div class="container">
+<div class="formulario">
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      class="campos"
+      placeholder="Your Name"
+    />
+    <small
+      class="alerta"
+      *ngIf="formulario.get('name')?.invalid && formulario.get('name')?.touched"
+    >
+      Campo obrigatório!</small
+    >
+
+    <input
+      id="email"
+      type="email"
+      formControlName="email"
+      class="campos"
+      placeholder="Your Email@exemple.com"
+    />
+    <small
+      class="alerta"
+      *ngIf="
+        formulario.get('email')?.invalid && formulario.get('email')?.touched
+      "
+    >
+      Campo obrigatório!</small
+    >
+
+    <textarea
+      id="message"
+      formControlName="message"
+      class="campos"
+      placeholder="Message"
+    ></textarea>
+    <small
+      class="alerta"
+      *ngIf="
+        formulario.get('message')?.invalid && formulario.get('message')?.touched
+      "
+      >Campo obrigatório (minimo 10 caracteres)!
+    </small>
+
+    <button class="btn" [disabled]="formulario.invalid">
+      START CHAT
+    </button>
+  </form>
+</div>
+</div>

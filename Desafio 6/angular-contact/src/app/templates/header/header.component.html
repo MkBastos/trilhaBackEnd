@@ -1,0 +1,22 @@
+<header class="titulo">
+  <p><b>YOUR</b>LOGO</p>
+
+  <ul
+    class="menu1"
+    *ngIf="responsivity || toggle"
+    [ngClass]="{ 'menu2' : toggle }"
+  >
+    <li><a href="">Home</a></li>
+    <li><a href="">Profile</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="">Contact</a></li>
+  </ul>
+
+  <button class="btn1" *ngIf="responsivity">Sign In</button>
+
+  <img
+    src="https://img.icons8.com/android/24/000000/menu.png"
+    *ngIf="!responsivity"
+    (click)="toggle = !toggle"
+  />
+</header>

@@ -1,0 +1,90 @@
+.container {
+  margin: 20px;
+  display: flex;
+  justify-content: end;
+}
+
+.formulario {
+  display: flex;
+  flex-direction:column;
+  margin-top: 20px;
+  width: 30%
+}
+
+.btn {
+  margin: 20px;
+  align-self: center;
+  border-radius: 20px;
+  width: 100px;
+  height: 30px;
+  background-color: rgb(148, 39, 148);
+  color: white;
+  border:none;
+}
+
+form {
+  display: flex;
+  flex-direction:column;
+}
+
+input {
+  border: none;
+  border-radius: 8px;
+  height: 38px;
+  box-shadow: 0 4px 8px #999;
+  margin: 5px;
+  padding: 5px;
+}
+
+.nome::placeholder {
+  background-image:
+  url(https://ik.imagekit.io/mkbastos/user_B7ZIys-RuM.png?updatedAt=1638821283161);
+  background-size: 3%;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
+.email::placeholder {
+  background-image:
+  url(https://ik.imagekit.io/mkbastos/mensagem_Qo5_MyZxhU.png?updatedAt=1638821283241);
+  background-size: 3%;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+
+}
+
+textarea::placeholder {
+  background-image:
+  url(https://ik.imagekit.io/mkbastos/chat-balloon_J3TW_B9RF.png?updatedAt=1638822705297);
+  background-size: 3%;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
+textarea {
+  border: none;
+  border-radius: 8px;
+  height: 150px;
+  box-shadow: 0 4px 8px #999;
+  margin: 4px;
+  padding: 5px;
+}
+
+.alerta {
+  color: red;
+  text-align: center;
+}
+
+:disabled {
+  background-color: gray;
+
+}
+
+.campos.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+
+.campos.ng-touched.ng-valid {
+  border: 1px solid green;
+}
+
