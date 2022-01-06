@@ -7,7 +7,7 @@ header {
 }
 
 .titulo {
-  color: purple;
+  color: #3f51b5;
   margin: 20px;
 }
 
@@ -39,20 +39,21 @@ header {
  }
 
 a {
+  color: #3f51b5;
   text-decoration: none;
 }
 
 .btn1 {
   margin: 5px;
-  border: solid purple;
-  color: purple;
+  border: solid;
+  color: #3f51b5;
   background: white;
   border-radius: 20px;
 
 }
 
 .cabecalho {
-  color: purple;
+  color: #3f51b5;
   display: flex;
   align-items: center;
   justify-content: space-between;
