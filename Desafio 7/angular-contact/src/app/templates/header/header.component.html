@@ -1,0 +1,26 @@
+<header>
+  <p class="titulo"><b>YOUR</b>LOGO</p>
+
+  <ul
+    class="menu1"
+    *ngIf="responsivity || toggle"
+    [ngClass]="{ 'menu2' : toggle }"
+  >
+    <li><a href="">Home</a></li>
+    <li><a href="">Profile</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="">Contact</a></li>
+  </ul>
+
+  <button class="btn1" mat-button *ngIf="responsivity">Sign In</button>
+
+  <button
+    mat-icon-button
+    color="primary"
+    aria-label="menu compacto, clique para exibir lista"
+    *ngIf="!responsivity"
+    (click)="toggle = !toggle"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+</header>

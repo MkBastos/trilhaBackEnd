@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content:flex-end;
+  margin: 20px;
+  background-image: url("https://ik.imagekit.io/mkbastos/imagem-fundo_3hTn3tvAWP.png?updatedAt=1638823646754");
+}
+
+.conteudo {
+  height: 30vh;
+  width: 30%
+}
+
+.titulo {
+  margin: 30px 0;
+  font-size: 3vw;
+  text-align: end;
+  color: purple;
+}
+
+.lorem {
+  text-align: right;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+}
+
+.conteudo2 {
+  height: 20vh;
+  width: 80%
+}
+
+.titulo2 {
+  color: purple;
+  text-align: center;
+}
+
+.lorem2 {
+  margin: 10px;
+  text-align: center;
+}
+
+

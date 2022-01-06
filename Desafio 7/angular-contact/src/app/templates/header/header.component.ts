@@ -13,6 +13,9 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if (window.innerWidth <= 1060) {
+      this.responsivity = false
+    }
 
 
   }
@@ -20,7 +23,7 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     console.log(event.target.innerWidth); //mostrar no console o tamanho atual da pagina
-    if (event.target.innerWidth <= 900) {
+    if (event.target.innerWidth <= 1060) {
       this.responsivity = false
     } else {
       this.responsivity = true
