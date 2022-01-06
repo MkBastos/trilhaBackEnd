@@ -1,7 +1,14 @@
 .bgi {
-  background-image: url("https://ik.imagekit.io/mkbastos/imagem-fundo_3hTn3tvAWP.png?updatedAt=1638823646754");
+  position:fixed;
+  width: 99vh;
+  bottom: 0;
+	left:0;
+  z-index: -1;
 }
 
-.bgi2 {
-background: none;
+
+@media screen and (max-width: 1060px) {
+  img {
+    display: none;
+  }
 }

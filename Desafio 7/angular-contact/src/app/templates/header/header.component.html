@@ -1,10 +1,13 @@
-<header>
-  <p class="titulo"><b>YOUR</b>LOGO</p>
-
+<mat-toolbar class="cabecalho mat-elevation-z5">
+  <span>
+    <a>
+      <h1><strong>YOUR</strong>LOGO</h1>
+    </a>
+  </span>
   <ul
     class="menu1"
     *ngIf="responsivity || toggle"
-    [ngClass]="{ 'menu2' : toggle }"
+    [ngClass]="{ menu2: toggle }"
   >
     <li><a href="">Home</a></li>
     <li><a href="">Profile</a></li>
@@ -15,12 +18,12 @@
   <button class="btn1" mat-button *ngIf="responsivity">Sign In</button>
 
   <button
-    mat-icon-button
-    color="primary"
-    aria-label="menu compacto, clique para exibir lista"
-    *ngIf="!responsivity"
-    (click)="toggle = !toggle"
-  >
+   mat-mini-fab
+   color="primary"
+   aria-label="Botão de menu, clica para exibir lista"
+   *ngIf="!responsivity"
+   (click)="toggle = !toggle">
     <mat-icon>menu</mat-icon>
   </button>
-</header>
+
+</mat-toolbar>

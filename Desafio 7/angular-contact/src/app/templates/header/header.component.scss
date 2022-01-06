@@ -3,6 +3,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100px;
 }
 
 .titulo {
@@ -22,14 +23,14 @@ header {
    border: solid rgb(197, 197, 197);
    border-radius: 5px;
    background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  position: absolute;
-  right: 2vw;
-  top: 8%;
-  margin: 2px;
+   display: flex;
+   flex-direction: column;
+
+   list-style: none;
+   position: absolute;
+   right: 2vw;
+   top: 8%;
+   padding: 4px;
 
  }
 
@@ -48,4 +49,15 @@ a {
   background: white;
   border-radius: 20px;
 
+}
+
+.cabecalho {
+  color: purple;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalho a {
+  text-decoration: none;
 }
