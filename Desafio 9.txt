@@ -1,0 +1,48 @@
+A) É um arquivo de configuração utilizado para estipular e configurar dependendias do projeto, como quais outros pacotes ele vai precisar.
+
+B) O angular.json contem as configurações globais da aplicação, no projeto foi utilizado para inserir os estilos e indicar onde em node_modules eles estão. 
+
+C) O router-outlet é uma diretiva do Router ele nos permite atraves de rotas informar qual componente vai ser carregado.
+
+D) A declaração 1 vai carregar assim que o modulo for carregado apontando qual componente sera exibido na rota 'new', e a declaração 2 informa o modulo a ser carregado quando essa rota for acessada.
+A declaração 1 é eager-load carregando assim que esse modulo é acessado, e a declaração 2 esta como lazy-load, esse modulo nao é carregado assim que a aplicação inicia mas só quando for "chamada".
+
+E) Componetes permitem uma manuteção mais facil, um codigo mais "magro", ajudam a aplicação a carregar de forma mais otimizada e também beneficia o usuário para ter uma tela menos poluida e mais intuitiva.
+
+F) Foi criado o base-resource-form, onde todas as informações e configurações de formulario fora inseridas em um unico arquivo para que os outros componentes herdem essas configurações.
+Foi criado o base-resource-list onde ficou toda a parte logica das paginas que listam as categorias e os lançamentos.
+Assim também o compoente de migalha de pao, o cabecalho, foi criado um componente para os erros dos campos do formulario, os erros de servidor e por fim a barra de navegação.
+
+
+G) O Input permite passar parametros entre os componentes, o @Input foi usado para criar uma lista dos itens que vão ser exibidos no componente breadcrumb.
+
+H) O Output faz parte do compartilhamento de dados entre componentes pai e filho, o Output é um decorator que marca um campo como uma propriedade de saida, a propriedade da DOM vinculada a esta saida é atualizada automaticamente quando ocorre alterações.
+
+I)Core, são componentes de uso para o funcionamento da aplicação, em pages são os componentes responsavel pela view ou seja o que o usuário vai ver e em shared são componentes que são compartilhados entre os modulos porém nao são essenciais para o funcionamento.
+
+J) O arquivo in-memory-database serve para criar um "back-end" mockado no projeto.
+
+K)MÉTODOS:
+  •get, obtém o valor de um controle ou caminho. 
+  •setValue, defini o valor de um controle do formGroup.
+  •markAsTouched,marca um campo como "tochado".
+  •patchValue, corrige o valor do FormGroup, recebe um objeto e faz o possível para corresponder os valores ao controle correto no Formgrup.
+  •reset, marca todos os campos como "untoched" e limpa os campos do formulario.
+  
+  PROPRIEDADES:
+  •valid, verifica se o status do formulário.
+  •value, exibe os valores dos campos no formulario.
+  •Validator, retorna a função usada para determinar se o formulario esta valido de forma síncrona.
+  •disabled, define o status do controle para desabilitado.
+  •touched, marcado como verdadeiro se o campo tiver recebido foco.
+
+L) no IF ele verifica se a navegação atual esta em "edit" e pega o valor da id na url e passa para params que em seguida atribui esse valor ao campo ID do formulario, e caso nao seja executado corretamente retorna um alert com uma mensagem.
+
+M)Herança.
+O componente EntryFormComponente esta herdando os metodos existentes no BaseResourceFormComponente.
+
+N)Polimorfismo.
+O método this.loadcategories sobre escrece o metodo que existem dentro da class pai para ter o seu proprio comportamente.
+
+O)Injeção de dependencia.
+O provider é uma instrução para o sistema de injeção de dependencia de como obter um valor para uma dependencia.
