@@ -28,21 +28,10 @@ export class FormClienteComponent implements OnInit {
       job: new FormControl(null, [Validators.required]),
       cpf: new FormControl(null, [Validators.required, Validators.pattern(this.onlyNumber), Validators.minLength(11)]),
       email: new FormControl(null, [Validators.required, Validators.email]),
-      birth: new FormControl(null, [Validators.required]),
+      birth: new FormControl(null, [Validators.required, Validacoes.getIdade]),
       cep: new FormControl(null, [Validators.required, Validators.pattern(this.onlyNumber), Validators.minLength(8)]),
       celular: new FormControl(null, [Validators.required, Validators.pattern(this.onlyNumber), Validators.minLength(11)]),
     })
   }
-
-  public getIdade() {
-    console.log(this.formCliente.get('birth')?.value)
-    let data = new Date(this.formCliente.get('birth')?.value);
-      console.log('data recebida',data)
-    let hoje = new Date();
-      console.log('dia atual',hoje)
-    let diferenca = data.getDate() - hoje.getDate();
-      console.log(diferenca)
-  }
-
 
 }

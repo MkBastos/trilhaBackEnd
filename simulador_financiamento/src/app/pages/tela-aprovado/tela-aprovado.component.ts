@@ -8,9 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaAprovadoComponent implements OnInit {
 
-  public valorParcela = '';
-  public valorAcumulado ='';
-
 
   constructor(private service: FinaciamentoService) { }
 

@@ -1,19 +1,30 @@
 import { Injectable } from "@angular/core";
-import { FormControl } from "@angular/forms";
+import { AbstractControl} from "@angular/forms";
 
 @Injectable()
 export class Validacoes {
 
-  static getIdade(data : FormControl) {
-      let today = new Date()
-      let nascimento = new Date(data.value)
-      let ano = today.getFullYear() - nascimento.getFullYear()
+  static getIdade(data : AbstractControl) {
+    let dia = data.parent?.get('birth')?.value?.substr(0,2)
+    let mes = data.parent?.get('birth')?.value?.substr(2,2)
+    let ano = data.parent?.get('birth')?.value?.substr(4,4)
+    let nasc = new Date(`${mes}/${dia}/${ano}`)
 
-      if (ano >= 18) {
-        return alert ("Maoir de idade")
-      } else {
-        return alert("Menor de idade")
-      }
+    let idadeDifMs = Date.now() - nasc.getTime()
+    let idadeData = new Date(idadeDifMs)
+    let idade = idadeData.getFullYear() - 1970
+
+    if (idade >= 18) {
+      return null
+    } else {
+      return {idadeValida: true}
+    }
+  }
+
+  public getIdade() {
+
+
+
   }
 
 }

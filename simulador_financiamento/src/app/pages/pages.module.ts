@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LOCALE_ID } from '@angular/core';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
@@ -37,11 +36,6 @@ import { NgxMaskModule } from 'ngx-mask';
     NgxMaskModule.forChild(),
 
   ],
-  providers: [
-    {
-      provide: LOCALE_ID,
-      useValue: 'pet-BR'
-    }
-  ]
+  providers: [  ]
 })
 export class PagesModule { }

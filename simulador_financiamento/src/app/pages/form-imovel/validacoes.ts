@@ -5,8 +5,8 @@ import { Injectable } from "@angular/core";
 export class Validacoes {
 
   static valorEntrada(campo: AbstractControl) {
-    const valor = campo.parent?.get('valor')?.value;
-    const entrada = campo.parent?.get('entrada')?.value;
+    const valor = campo.parent?.get('valor')?.value?.replace(',', '.');
+    const entrada = campo.parent?.get('entrada')?.value?.replace(',', '.');
 
     if (entrada < (valor * 0.20)) {
       return {entradaValida: true};
