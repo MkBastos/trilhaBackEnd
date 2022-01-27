@@ -12,7 +12,7 @@ import { Validacoes } from './validacoes';
 export class FormClienteComponent implements OnInit {
 
   private onlyNumber = "[0-9]*"
-  private caracteres = "[a-zA-Z]*"
+  private caracteres = "[A-zÀ-ú ]+"
 
   formCliente!: FormGroup;
 

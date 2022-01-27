@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import {Observable, Subject, BehaviorSubject} from 'rxjs'
 
 @Injectable({
   providedIn: 'root',
 })
 export class FinaciamentoService {
   constructor(private router: Router) {}
-
-  /* Financiamento aprovado se:
-  a soma do valor aprovado com juros,
-  divida pelo numero de parcelas é menor ou igual 30% da renda mensal
-*/
+    private msgValor = new BehaviorSubject('');
+    private msgParcela = new BehaviorSubject('');
+    currentParcela = this.msgParcela.asObservable();
+    currentValor = this.msgValor.asObservable();
 
   public jurosComposto(form: any) {
     let renda = form.renda.replace(',', '.')
@@ -20,6 +20,9 @@ export class FinaciamentoService {
     let valorAcumulado = valor*Math.pow((1+ juros), periodo);
     let valorParcela = valorAcumulado / periodo
 
+    this.msgParcela.next(valorParcela.toFixed(2))
+    this.msgValor.next(valor.toFixed(2))
+
       if (valorParcela <= renda * 0.3) {
           this.router.navigate(['/aprovado'])
       } else {
@@ -27,15 +30,4 @@ export class FinaciamentoService {
       }
   }
 
-  public valorAprovado(form: any) {
-    let valor = form.valor - form.entrada
-    console.log(valor)
-  }
-
-  public parcelaInicial (form: any) {
-    let valorAprovado = 180000.00 - 36000.00;
-    let jurosAno = 0.08;
-    let parcelas = 360
-    valorAprovado * ((100 + (jurosAno * (parcelas / 12)))/100)^ parcelas
-  }
 }

@@ -1,5 +1,7 @@
+import { Subscription } from 'rxjs';
 import { FinaciamentoService } from './../../shared/finaciamento.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-tela-aprovado',
@@ -8,11 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaAprovadoComponent implements OnInit {
 
+  msgParcela!: string;
+  msgValor!: string;
+  subParcela!: Subscription;
+  subValor!: Subscription;
 
-  constructor(private service: FinaciamentoService) { }
+
+  constructor(private service: FinaciamentoService ) { }
 
   ngOnInit(): void {
+    this.subParcela =
+    this.service.currentParcela.subscribe(message => this.msgParcela = message)
+    this.subValor =
+    this.service.currentValor.subscribe(message => this.msgValor = message)
+   }
 
-  }
+   ngOnDestroy() {
+     this.subParcela.unsubscribe();
+   }
 
 }
