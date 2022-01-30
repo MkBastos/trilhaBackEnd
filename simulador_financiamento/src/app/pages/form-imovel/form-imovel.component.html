@@ -1,10 +1,9 @@
 <div class="fundo">
   <div>
-    <p class="card">Dados do imóvel</p>
+    <h2 tabindex="0" class="card">Dados do imóvel</h2>
   </div>
-
   <div class="container">
-    <form class="formImovel" [formGroup]="formImovel">
+    <form  class="formImovel" [formGroup]="formImovel">
       <mat-form-field class="formInput">
         <mat-label>Tipo do imóvel</mat-label>
         <mat-select formControlName="tipo">
@@ -80,9 +79,21 @@
     </form>
     <hr />
     <div class="footer">
-      <button mat-stroked-button color="primary" class="btn" routerLink="/formCliente">
+      <button
+        mat-stroked-button
+        color="primary"
+        class="btn"
+        routerLink="/formCliente"
+      >
         VOLTAR
       </button>
+      <div
+      *ngIf="formImovel.invalid"
+      tabindex="0"
+      role="button"
+      aria-disabled="true"
+      aria-label="simular"
+    ></div>
       <button
         mat-flat-button
         color="primary"

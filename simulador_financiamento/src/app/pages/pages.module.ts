@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
 import { NgxMaskModule } from 'ngx-mask';
+import { DisableControlModule } from '../shared/directives/disable-control/disable-control.module';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { NgxMaskModule } from 'ngx-mask';
     MatSelectModule,
     ReactiveFormsModule,
     NgxMaskModule.forChild(),
+    DisableControlModule
 
   ],
   providers: [  ]

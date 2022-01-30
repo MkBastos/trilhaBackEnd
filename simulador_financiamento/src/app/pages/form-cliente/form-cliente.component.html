@@ -1,5 +1,5 @@
 <div class="fundo">
-  <div><p class="card">Dados do proponente</p></div>
+  <div><h2 tabindex="0" class="card">Dados do proponente</h2></div>
   <div class="container">
     <form class="formCliente" [formGroup]="formCliente">
       <mat-form-field appearance="outline" class="formInput">
@@ -79,10 +79,12 @@
       <mat-form-field appearance="outline" class="formInput">
         <mat-label>CEP</mat-label>
         <input
-         type="text"
-         formControlName="cep"
-         matInput placeholder="CEP"
-         mask="00000-000" />
+          type="text"
+          formControlName="cep"
+          matInput
+          placeholder="CEP"
+          mask="00000-000"
+        />
         <mat-error *ngIf="formCliente.get('cep')?.invalid"
           >O CEP deve conter 9 digitos</mat-error
         >
@@ -109,15 +111,22 @@
       <button mat-stroked-button color="primary" class="btn" routerLink="">
         CANCELAR
       </button>
-      <button
-        mat-flat-button
-        color="primary"
-        class="btn"
-        routerLink="/formImovel"
-        [disabled]="formCliente.invalid"
-      >
-        CONTINUAR
-      </button>
+      <div
+        *ngIf="formCliente.invalid"
+        tabindex="0"
+        role="button"
+        aria-disabled="true"
+        aria-label="continuar"
+      ></div>
+        <button
+          mat-flat-button
+          color="primary"
+          class="btn"
+          routerLink="/formImovel"
+          [disabled]="formCliente.invalid"
+        >
+          CONTINUAR
+        </button>
     </div>
   </div>
 </div>

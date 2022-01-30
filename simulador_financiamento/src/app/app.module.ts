@@ -9,6 +9,7 @@ import { CoreModule } from './core/core.module';
 import { PagesModule } from './pages/pages.module';
 
 import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { DisableControlModule } from './shared/directives/disable-control/disable-control.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { NgxMaskModule, IConfig } from 'ngx-mask';
     CoreModule,
     PagesModule,
     NgxMaskModule.forRoot(),
-
+    DisableControlModule
   ],
   providers: [],
   bootstrap: [AppComponent]
