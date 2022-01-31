@@ -41,6 +41,11 @@ hr {
   transform: matrix(1, 0, 0, -1, 0, 0);
   }
 
+.fakebtn {
+    position: absolute;
+    right: 0
+  }
+
 .footer {
   padding: 10px;
   display: flex;

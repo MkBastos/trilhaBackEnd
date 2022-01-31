@@ -20,6 +20,7 @@
       <mat-form-field appearance="outline" class="formInput">
         <mat-label>Profissão</mat-label>
         <input
+          class="formInput"
           type="text"
           formControlName="job"
           matInput
@@ -112,21 +113,22 @@
         CANCELAR
       </button>
       <div
+        class="fakebtn"
         *ngIf="formCliente.invalid"
         tabindex="0"
         role="button"
         aria-disabled="true"
         aria-label="continuar"
       ></div>
-        <button
-          mat-flat-button
-          color="primary"
-          class="btn"
-          routerLink="/formImovel"
-          [disabled]="formCliente.invalid"
-        >
-          CONTINUAR
-        </button>
+      <button
+        mat-flat-button
+        color="primary"
+        class="btn"
+        routerLink="/formImovel"
+        [disabled]="formCliente.invalid"
+      >
+        CONTINUAR
+      </button>
     </div>
   </div>
 </div>
