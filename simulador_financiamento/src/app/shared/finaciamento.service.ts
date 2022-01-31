@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import {Observable, Subject, BehaviorSubject} from 'rxjs'
+import { BehaviorSubject } from 'rxjs'
 
 @Injectable({
   providedIn: 'root',
 })
 export class FinaciamentoService {
+
   constructor(private router: Router) {}
+
     private msgValor = new BehaviorSubject('');
     private msgParcela = new BehaviorSubject('');
     currentParcela = this.msgParcela.asObservable();
@@ -20,8 +22,8 @@ export class FinaciamentoService {
     let valorAcumulado = valor*Math.pow((1+ juros), periodo);
     let valorParcela = valorAcumulado / periodo
 
-    this.msgParcela.next(valorParcela.toFixed(2))
-    this.msgValor.next(valor.toFixed(2))
+    this.msgParcela.next(valorParcela.toFixed(2).replace('.', ','))
+    this.msgValor.next(valor.toFixed(2).replace('.', ','))
 
       if (valorParcela <= renda * 0.3) {
           this.router.navigate(['/aprovado'])

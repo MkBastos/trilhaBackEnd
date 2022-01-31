@@ -16,8 +16,6 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { NgxMaskModule } from 'ngx-mask';
 
-import { AutoFocusModule } from './../shared/directives/auto-focus/auto-focus.module';
-
 
 @NgModule({
   declarations: [
@@ -36,7 +34,7 @@ import { AutoFocusModule } from './../shared/directives/auto-focus/auto-focus.mo
     MatSelectModule,
     ReactiveFormsModule,
     NgxMaskModule.forChild(),
-    AutoFocusModule
+
 
 
   ],

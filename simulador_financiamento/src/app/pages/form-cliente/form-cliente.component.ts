@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
+
 import { Validacoes } from './validacoes';
 
 @Component({
@@ -16,10 +17,13 @@ export class FormClienteComponent implements OnInit {
 
   formCliente!: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    ) { }
 
   ngOnInit(): void {
     this.criarFormulario();
+
   }
 
   private criarFormulario() {
